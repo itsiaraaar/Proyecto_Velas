@@ -25,7 +25,7 @@ function App() {
         <Route path='/Item/:id' element={<Item />} />
         <Route path="/Carrito" element={<Carrito />} />
       </Routes>
-      <Footer/>
+      <Footer className="footer"/>
     </GlobalState>
     </>
     

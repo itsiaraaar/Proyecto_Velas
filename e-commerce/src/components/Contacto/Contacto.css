@@ -1,3 +1,9 @@
 .title{
     color:#ffffff !important;
 }
+
+.div {
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}

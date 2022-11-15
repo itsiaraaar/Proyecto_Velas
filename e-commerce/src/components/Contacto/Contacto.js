@@ -4,7 +4,7 @@ import '../Contacto/Contacto.css'
 
 function Contacto() {
   return (
-    <div>
+    <div className='div'>
       <h1 className='title'>Contacto</h1>
     {/* "https://www.facebook.com/madrenaturaesencias/" */}
       <FormContact />

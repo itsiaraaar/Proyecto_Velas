@@ -5,14 +5,16 @@
     border-spacing: 4px;
     /* display: flex;
     flex-flow:column; */
-    align-items: center;
+    /* align-cont: center; */
     padding-top: 30px;
     padding-right: 30px;
     padding-left: 30px;
     padding-bottom: 20px;
-    
 }
 body{
-    color: #ffff !important;
-    text-align: center;
+    color: #ffff !important; 
+    /* text-align: center; */
 }
+ #check{
+    text-align: left !important;
+} 

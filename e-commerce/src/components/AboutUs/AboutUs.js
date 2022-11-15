@@ -1,10 +1,10 @@
 import React from 'react'
-import './About.css';
+import '../AboutUs/About.css';
 function AboutUs() {
     return (
         <>
-            <div>
-                <h1>About us</h1>
+            <div className='div'>
+                <h1 className='title'>About us</h1>
                 <p>Madre Natura es un e-commerce diseñado para la venta de velas y fragancias que te generan sensaciones que te transportan a vivir con todos tus sentidos...</p>
             </div>
             <div className='div'>

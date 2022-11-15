@@ -15,15 +15,17 @@ function CardProduct() {
                                 return (
                                     <Card id="color" className="col-lg-6 mb-4" style={{ width: '18rem' }}>
                                         <Link to={`/Item/${p.id}`}>
-                                            <Card.Img variant="top" src={p.img}/>
+                                            <span key={p.id}><Card.Img src={p.img} alt=""/></span>
                                         </Link>
                                         <Card.Body>
-                                            <Card.Title className='Title'>{p.name}</Card.Title>
+                                            <Card.Title className='Title'>
+                                                <span key={p.id}></span>{p.name}
+                                            </Card.Title>
                                             <Card.Subtitle>
-                                                <span className='subtitle'> {p.category}</span>
+                                                <span className='subtitle' key={p.id}> {p.category}</span>
                                             </Card.Subtitle>
                                             <Card.Text>
-                                                <span>Precio: {p.prize}</span>
+                                                <span key={p.id}>Precio: {p.prize}</span>
                                             </Card.Text>
                                             <Button onClick={() => context.addProductToCart(p)} variant="dark">Agregar al carrito</Button>
                                         </Card.Body>

@@ -1,12 +1,15 @@
 .div{
     text-align:center!important;
+    padding-bottom: 30px;
 }
 
 #text{
     font-size: 30px;
 }
 
-#title{
+#titlee{
     border-color: black;
+    border-style: border;
+    border: 3px;
     border-bottom:black;
 }
