@@ -6,9 +6,9 @@ import { shopReducer } from '../Reducer/ShopReducer';
 export const shopContext = React.createContext({
     products: data,
     cart: [],
-
-    addProductToCart: product => {},
-    removeProductFromCart: productID => {}
+//les agregue () a product y productID
+    addProductToCart: (product) => {},
+    removeProductFromCart: (productID) => {}
 });
 function GlobalState (props) {
     const [products, setProductos] = useState(data);

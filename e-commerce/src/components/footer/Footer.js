@@ -4,9 +4,10 @@ import {
     MDBIcon,
     MDBBtn
   } from 'mdb-react-ui-kit';
+  import "../footer/Footer.css";
   export default function Footer() {
     return (
-      <MDBFooter className='text-center text-white' style={{ backgroundColor: '#f1f1f1' }}>
+      <MDBFooter id="footer" className='text-center text-white' style={{ backgroundColor: '#f1f1f1' }}>
         <MDBContainer className='pt-4'>
           <section className='mb-4'>
             <MDBBtn

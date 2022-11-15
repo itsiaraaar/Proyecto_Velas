@@ -14,14 +14,11 @@ function Item() {
 
     function getProductById(id) {
         const item = data.find(x => x.id === id)
-        if (item !== null) {  setProduct(item) }
+        if (item != null) { setProduct(item) }
     }
     return (
         <>
-            {produc ? ( <>
-                <div>
-                    <h1>Información del producto</h1>
-                </div>
+            {produc ? (<>
                 <div>
                     {/* <Figure>
                         <Figure.Image
@@ -43,6 +40,9 @@ function Item() {
                             <p>{produc.description}</p>
                         </Figure.Caption>
                     </Figure> */}
+                    <div>
+                        <h1>Información del producto</h1>
+                    </div>
                     <img src={produc.img1} alt="fot1"></img>
                     <img src={produc.img2} alt="fot1"></img>
                     <h1>{produc.name}</h1>

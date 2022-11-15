@@ -11,7 +11,7 @@ import img6 from './images/difusores.jpeg';
 function Carroussell() {
     return (
         <div className="box" >
-            <Carousel className="Carousel">
+            <Carousel className="Carousel" >
                 <Carousel.Item >
                     <img
                         className="d-blocl w-100"

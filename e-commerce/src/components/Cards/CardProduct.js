@@ -8,6 +8,7 @@ function CardProduct() {
     return (
         <>
             <shopContext.Consumer>
+                {/* recién le puse los () a context, capaz no va es para probar */}
                 {context => (
                     <>
                         <div id="box" className="row">
@@ -15,7 +16,7 @@ function CardProduct() {
                                 return (
                                     <Card id="color" className="col-lg-6 mb-4" style={{ width: '18rem' }}>
                                         <Link to={`/Item/${p.id}`}>
-                                            <span key={p.id}><Card.Img src={p.img} alt=""/></span>
+                                            <span key={p.id}><Card.Img src={p.img} alt="" /></span>
                                         </Link>
                                         <Card.Body>
                                             <Card.Title className='Title'>
