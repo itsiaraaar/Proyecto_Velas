@@ -1,0 +1,12 @@
+.div{
+    text-align:center!important;
+}
+
+#text{
+    font-size: 30px;
+}
+
+#title{
+    border-color: black;
+    border-bottom:black;
+}

@@ -1,0 +1,18 @@
+.form{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    border-spacing: 4px;
+    /* display: flex;
+    flex-flow:column; */
+    align-items: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    
+}
+body{
+    color: #ffff !important;
+    text-align: center;
+}

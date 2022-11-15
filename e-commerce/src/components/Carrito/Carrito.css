@@ -1,0 +1,12 @@
+.title{
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 40px;
+    border-collapse: separate;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    border-block-color: white;
+    text-align: center;
+}

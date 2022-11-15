@@ -1,0 +1,25 @@
+
+.Title {
+  color: rgb(9, 9, 9);
+  border-style: solid;
+  border-color: black;
+  border-top: -0px;
+  border-left: -0px;
+  border-right: -0px;
+}
+
+.subtitle {
+  color: rgb(0, 0, 0);
+}
+
+#color {
+  color: #21213d;
+}
+#box {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
