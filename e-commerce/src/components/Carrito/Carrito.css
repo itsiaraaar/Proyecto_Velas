@@ -11,3 +11,21 @@
     text-align: center;
     margin-bottom: 100px;
 }
+.image{
+    width: 107px;
+    height: 90;
+}
+table th{
+    text-align: center;
+}
+.ta{
+   padding-bottom: 40px;
+}
+table td{
+    border: 1px;
+}
+
+.car-box{
+    border-style:solid;
+    border-color: black;
+}

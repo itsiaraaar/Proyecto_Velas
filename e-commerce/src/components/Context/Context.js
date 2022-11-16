@@ -8,7 +8,8 @@ export const shopContext = React.createContext({
     cart: [],
 //les agregue () a product y productID
     addProductToCart: (product) => {},
-    removeProductFromCart: (productID) => {}
+    removeProductFromCart: (productID) => {},
+    clearCart: ()=> {}
 });
 function GlobalState (props) {
     const [products, setProductos] = useState(data);
@@ -23,13 +24,18 @@ function GlobalState (props) {
         dispatch({type: TYPES.REMOVE_ONE_FROM_CART, productId: productId});
     };
 
+    function clearCart (){
+        dispatch({type: TYPES.CLEAR_CART})
+    }
+
     return(
         <shopContext.Provider
         value ={{
             products: products,
             cart: cartState.cart,
             addProductToCart: addProductToCart,
-            removeProductFromCart: removeProductFromCart
+            removeProductFromCart: removeProductFromCart,
+            clearCart: clearCart
         }}
         >
         {props.children}

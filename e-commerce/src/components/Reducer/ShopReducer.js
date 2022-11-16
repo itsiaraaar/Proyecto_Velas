@@ -14,18 +14,20 @@ export function shopReducer(state, action) {
             let newItem = data.find(x => x.id === action.product.id)
                     //Reviso si ya no tengo ese item
             let itemCart = state.cart.find(x => x.id === action.product.id)
+                
             return itemCart?{
-                    //Si lo tengo sumar la cantidad y calcular el valor del total 
-                ...state,
+                    ...state,
+                     //Si lo tengo sumar la cantidad y calcular el valor del total 
                 cart: state.cart.map((item) => item.id === newItem.id 
-                ? {...item, quantity: item.quantity + 1, total: item.prize* item.quantity}: item),
-            }
+                ?{...item, quantity: item.quantity + 1, total: item.prize* item.quantity}: item),}
+                   
+                
             :{
-                    //Si no lo tengo, entonces el total es el precio y la cantidad1
+                    //Si no lo tengo, entonces el total es el precio y la cantidad 1
                 ...state,
                 cart: [...state.cart, {newItem, quantity: 1, total: newItem.prize}]
             }
-        }
+        } 
 
         case TYPES.REMOVE_ONE_FROM_CART: {
             let itemDelete = data.find(x => x.id === action.productId)

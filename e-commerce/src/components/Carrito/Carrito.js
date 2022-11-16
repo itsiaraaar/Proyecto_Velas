@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { shopContext } from '../Context/Context';
 import './Carrito.css';
+import Figure from 'react-bootstrap/Figure';
 function Carrito() {
   const context = useContext(shopContext);
   return (
@@ -9,13 +10,52 @@ function Carrito() {
       <div>
         {context.cart.map((p) => {
           return (
-          <div>
-            <img src={p.newItem.img1} alt="img1"></img>
-            <p>{p.newItem.name}</p>
-            <p>Precio: {p.newItem.prize}</p>
-{/*             <p>Cantidad: {p.newItem.quantity}</p> */}
-            <button onClick={() => context.removeProductFromCart(p.newItem.id)}>Eliminar</button>
-          </div>)
+            <div className="ta">
+              <div className='car-box'>
+                <table>
+                  <th>
+                    Producto
+                    <td>
+                      <Figure.Image
+                        width={171}
+                        height={180}
+                        alt="171x180"
+                        src={p.newItem.img}
+                      />
+                    </td>
+                  </th>
+                  <th>
+                    Nombre
+                    <td>
+                      <p>{p.newItem.name}</p>
+                    </td>
+
+                  </th>
+                  {/* <img className="imagen" src={p.newItem.img} alt="img1"></img> */}
+                  <th>
+                    Precio
+                    <td>
+                      <p>{p.newItem.prize}</p>
+                    </td>
+                  </th>
+                  <th>
+                    Cantidad
+                    <td>
+
+                      <p>{p.quantity}</p>
+                    </td>
+                  </th>
+                  <th>
+                  Total
+                    <td>
+                      <p>{p.total}</p>
+                    </td>
+                  </th>
+                </table>
+              </div>
+              <button type="button" class="btn btn-light btn-sm" onClick={() => context.removeProductFromCart(p.newItem.id)}>Eliminar</button>
+            </div>)
+
         })
         }
       </div>
