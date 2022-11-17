@@ -29,3 +29,7 @@ table td{
     border-style:solid;
     border-color: black;
 }
+
+#empty-cart{
+    padding-bottom: 400px;
+}

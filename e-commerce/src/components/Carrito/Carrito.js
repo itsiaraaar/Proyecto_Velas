@@ -29,7 +29,6 @@ function Carrito() {
                     <td>
                       <p>{p.newItem.name}</p>
                     </td>
-
                   </th>
                   {/* <img className="imagen" src={p.newItem.img} alt="img1"></img> */}
                   <th>
@@ -41,27 +40,28 @@ function Carrito() {
                   <th>
                     Cantidad
                     <td>
-
                       <p>{p.quantity}</p>
                     </td>
                   </th>
                   <th>
-                  Total
+                    Total
                     <td>
                       <p>{p.total}</p>
                     </td>
                   </th>
                 </table>
               </div>
-              <button type="button" class="btn btn-light btn-sm" onClick={() => context.removeProductFromCart(p.newItem.id)}>Eliminar</button>
+              <button type="button" className="btn btn-light btn-sm" onClick={() => context.removeProductFromCart(p.newItem.id)}>Eliminar</button>
             </div>)
-
         })
         }
       </div>
-
+      {context.cart.length >= 1 ? (<div>
+        <button type="button" className="btn btn-light btn-sm" onClick={() => context.clearCart(context.cart)}>Vaciar el carrito</button>
+      </div>
+      ) : (<div id="empty-cart"></div>)
+      }
     </>
-
   )
 }
 

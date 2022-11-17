@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { data } from '../info/data';
 import Loader from '../Loader/Loader';
 import Figure from 'react-bootstrap/Figure';
+import "../item/item.css";
 
 function Item() {
     const { id } = useParams();
@@ -19,44 +20,37 @@ function Item() {
     }
     return (
         <>
-            {produc ? (<>
+            {produc ? (
                 <div>
-                    <Figure>
+                    <Figure className='flex-img'>
                         <Figure.Image
-                            width={171}
-                            height={180}
-                            alt="171x180"
+                            className='flex-img'
+                            width={250}
+                            height={250}
+                            alt="img1"
                             src={produc.img}
                         />
-                        <Figure.Image
-                            width={171}
-                            height={180}
-                            alt="171x180"
-                            src={produc.img2}
-                        />
-                        <Figure.Caption>
-                            <h1>{produc.name}</h1>
-                            <h2>{produc.category}</h2>
-                            <h3>{produc.prize}</h3>
-                            <p>{produc.description}</p>
-                        </Figure.Caption>
+                        {produc.img2 ? (
+                            <Figure.Image
+                                className='flex-img'
+                                width={250}
+                                height={250}
+                                alt="171x180"
+                                src={produc.img2} />) : (<div></div>)}
+                        <div className='description'>
+                                <h1 className='border-title'>{produc.name}</h1>
+                                <h5>
+                                    Categoría:{produc.category}
+                                    <br></br>
+                                    {produc.prize}$
+                                    <br></br>
+                                    {produc.description}
+                                </h5>
+                        </div>
                     </Figure>
-                    {/* <div>
-                        <h1>Información del producto</h1>
-                    </div>
-                    <img src={produc.img} alt="fot1"></img>
-                    <img src={produc.img2} alt="fot1"></img>
-                    <h1>{produc.name}</h1>
-                    <h2>{produc.category}</h2>
-                    <h3>{produc.prize}</h3>
-                    <p>{produc.description}</p>
-                    */}
-                </div>
-            </>) : <Loader></Loader>}
-
+                </div >) : (<Loader></Loader>)
+            }
         </>
-
-
     )
 }
 
