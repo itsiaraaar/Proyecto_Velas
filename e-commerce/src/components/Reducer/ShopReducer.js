@@ -31,8 +31,7 @@ export function shopReducer(state, action) {
 
         case TYPES.REMOVE_ONE_FROM_CART: {
             let itemDelete = data.find(x => x.id === action.productId)
-/* cambie itemDelete.quantity? por index*/
-            return itemDelete.quantity > 1 ? {
+            return itemDelete.quantity <= 1 ? {
                 ...state,
                 cart: state.cart.map((item)=> item.id === action.productId 
                 ? {...item,quantity: item.quantity -1, total: item.prize * item.quantity}: item),
@@ -41,7 +40,7 @@ export function shopReducer(state, action) {
             {
 /*Cambie productId por payload */
             ...state,
-                cart: state.cart.filter(x => x.id !== action.payload)
+                cart: state.cart.filter(x=> x.id !== action.payload)
             }
         }
 

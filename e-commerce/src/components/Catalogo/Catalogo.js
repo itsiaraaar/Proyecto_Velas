@@ -9,7 +9,7 @@ function Catalogo() {
     <div className='div'>
     <h1 className='title'>Productos</h1>
     <div>{data ? (
-      <div kye={data.id}>
+      <div key={data.id}>
         <CardProduct/>
         </div>
       ): (<Loader/>)

@@ -38,14 +38,14 @@ function Item() {
                                 alt="171x180"
                                 src={produc.img2} />) : (<div></div>)}
                         <div className='description'>
-                                <h1 className='border-title'>{produc.name}</h1>
-                                <h5>
-                                    Categoría:{produc.category}
-                                    <br></br>
-                                    {produc.prize}$
-                                    <br></br>
-                                    {produc.description}
-                                </h5>
+                            <h1 className='border-title'>{produc.name}</h1>
+                            <h5>
+                                Categoría:{produc.category}
+                                <br></br>
+                                {produc.prize}$
+                                <br></br>
+                                {produc.description}
+                            </h5>
                         </div>
                     </Figure>
                 </div >) : (<Loader></Loader>)
