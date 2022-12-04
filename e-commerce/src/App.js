@@ -11,6 +11,7 @@ import GlobalState from './components/Context/Context';
 import Item from './components/item/Item';
 import AboutUs from './components/AboutUs/AboutUs';
 import Footer from './components/footer/Footer';
+import CheckOut from './components/CheckOut/CheckOut';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path='/Item/:id' element={<Item />} />
         <Route path="/Carrito" element={<Carrito />} />
+        <Route path="/CheckOut" element={<CheckOut/>}/>
       </Routes>
       <Footer className="footer"/>
     </GlobalState>

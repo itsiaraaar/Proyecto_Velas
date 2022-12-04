@@ -1,5 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import '/Users/iarareartee/Desktop/Proyecto_Velas/Proyecto_Velas/e-commerce/src/components/Carroussell/JS/Carrousell.css';
 /* import { data } from "../../data.js"; */
 import img1 from './images/vela-paz-lejos.jpeg';
 import img2 from './images/tapamarmolada.jpeg';

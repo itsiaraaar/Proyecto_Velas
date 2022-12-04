@@ -10,16 +10,26 @@ export function shopReducer(state, action) {
     switch (action.type) {
         case TYPES.ADD_TO_CART: {
         /* Cambie products por product para probar */
-            /* let newItem = state. productos.find(x => x.id === action.payload) */
             let newItem = data.find(x => x.id === action.product.id)
                     //Reviso si ya no tengo ese item
             let itemCart = state.cart.find(x => x.id === action.product.id)
-                
+
+            /* let indexItem = state.cart.findIndex((item) => item.id === action.product.id)
+            if(indexItem < 0){
+                state.cart.push({...item, quantity:1, total: item.total});
+            } else{
+                const newItem = {
+                    ...state.cart[indexItem]
+                }
+                {...item, quantity: item.quantity}
+            } */
+        
             return itemCart?{
                     ...state,
                      //Si lo tengo sumar la cantidad y calcular el valor del total 
                 cart: state.cart.map((item) => item.id === newItem.id 
-                ?{...item, quantity: item.quantity + 1, total: item.prize* item.quantity}: item),}
+                //cambie ... :item.quantity + 1, total: item.prize* item.quantity
+                ?{...item, quantity: item.quantity + 1, total: item.prize * item.quantity}: item),}
                    
                 
             :{
@@ -27,14 +37,13 @@ export function shopReducer(state, action) {
                 ...state,
                 cart: [...state.cart, {newItem, quantity: 1, total: newItem.prize}]
             }
-        } 
-
+        }
         case TYPES.REMOVE_ONE_FROM_CART: {
             let itemDelete = data.find(x => x.id === action.productId)
-            return itemDelete.quantity <= 1 ? {
+            return itemDelete.quantity > 1 ? {
                 ...state,
                 cart: state.cart.map((item)=> item.id === action.productId 
-                ? {...item,quantity: item.quantity -1, total: item.prize * item.quantity}: item),
+                ? {...item, quantity: item.quantity -1, total: item.prize * item.quantity}: item),
             }
             :
             {

@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { shopContext } from '../Context/Context';
 import './Carrito.css';
 import Figure from 'react-bootstrap/Figure';
+import { Link } from 'react-router-dom';
 function Carrito() {
   const context = useContext(shopContext);
   return (
@@ -58,6 +59,7 @@ function Carrito() {
       </div>
       {context.cart.length >= 1 ? (<div>
         <button type="button" className="btn btn-light btn-sm" onClick={() => context.clearCart(context.cart)}>Vaciar el carrito</button>
+        <button type="button" className="btn btn-light btn-sm" onClick={<Link to="/CheckOut"/>}>Pagar</button>
       </div>
       ) : (<div id="empty-cart"></div>)
       }

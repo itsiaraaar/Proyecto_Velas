@@ -8,7 +8,6 @@ function CardProduct() {
     return (
         <>
             <shopContext.Consumer>
-                {/* recién le puse los () a context, capaz no va es para probar */}
                 {context => (
                     <>
                         <div id="box" className="row">
